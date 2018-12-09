@@ -11,9 +11,4 @@ class DefaultingMap<K, V> {
     operator fun set(key: K, value: V) {
         storage[key] = value
     }
-
-    operator fun iterator() = storage.iterator()
-
-    val values: Collection<V>
-        get() = storage.values
 }

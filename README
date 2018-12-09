@@ -1,616 +1,116 @@
 This produces the following compiler error using IDEA 2018.2:
 
-Information:Kotlin: kotlinc-jvm 1.2.51 (JRE 1.8.0_131-b11)
-Information:12/9/18, 10:47 AM - Compilation completed with 1 error and 0 warnings in 1 s 849 ms
 Error:Kotlin: [Internal Error] java.lang.IllegalStateException: Backend Internal error: Exception during code generation
 Cause: Back-end (JVM) Internal error: wrong code generated
 org.jetbrains.kotlin.codegen.CompilationException Back-end (JVM) Internal error: Couldn't transform method node:
-findHighScore (IIZ)J:
+crash ()V:
    L0
-    LINENUMBER 77 L0
+    LINENUMBER 2 L0
     NEW DefaultingMap
     DUP
     LCONST_0
     INVOKESTATIC java/lang/Long.valueOf (J)Ljava/lang/Long;
     INVOKESPECIAL DefaultingMap.<init> (Ljava/lang/Object;)V
-    ASTORE 3
+    ASTORE 0
    L1
-    LINENUMBER 78 L1
-    NEW Ring
-    DUP
+    LINENUMBER 3 L1
+    ALOAD 0
     ICONST_0
     INVOKESTATIC java/lang/Integer.valueOf (I)Ljava/lang/Integer;
-    INVOKESPECIAL Ring.<init> (Ljava/lang/Object;)V
-    ASTORE 4
-   L2
-    LINENUMBER 79 L2
-    ICONST_0
-    ISTORE 5
-   L3
-    LINENUMBER 80 L3
-    ILOAD 2
-    IFEQ L4
-    NEW java/lang/StringBuilder
-    DUP
-    INVOKESPECIAL java/lang/StringBuilder.<init> ()V
-    LDC "[-] "
-    INVOKEVIRTUAL java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-    ALOAD 4
-    ICONST_0
-    INVOKESTATIC java/lang/Integer.valueOf (I)Ljava/lang/Integer;
-    INVOKEVIRTUAL Ring.debug (Ljava/lang/Object;)Ljava/lang/String;
-    INVOKEVIRTUAL java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-    INVOKEVIRTUAL java/lang/StringBuilder.toString ()Ljava/lang/String;
-    ASTORE 6
-    NOP
-   L5
-    GETSTATIC java/lang/System.out : Ljava/io/PrintStream;
-    ALOAD 6
-    INVOKEVIRTUAL java/io/PrintStream.println (Ljava/lang/Object;)V
-   L6
-    NOP
-    GOTO L7
-   L7
-   L4
-    LINENUMBER 82 L4
-    ICONST_1
-    ISTORE 6
+    ISTORE 1
+    ASTORE 2
+    ALOAD 2
     ILOAD 1
-    ISTORE 7
-    ILOAD 6
-    ILOAD 7
-    IF_ICMPGT L8
-   L9
-   L10
-    LINENUMBER 83 L10
-    ILOAD 6
-    BIPUSH 23
-    IREM
-    IFNE L11
-   L12
-    LINENUMBER 84 L12
-    ICONST_1
-    ISTORE 8
-    BIPUSH 7
-    ISTORE 9
-   L13
-    ILOAD 8
-    ILOAD 9
-    IF_ICMPGT L14
-   L15
-    LINENUMBER 85 L15
-    ALOAD 4
-    INVOKEVIRTUAL Ring.moveCCW ()V
-   L16
-    LINENUMBER 84 L16
-    IINC 8 1
-   L17
-    GOTO L13
-   L14
-    LINENUMBER 88 L14
-    ALOAD 3
-    ILOAD 5
-    INVOKESTATIC java/lang/Integer.valueOf (I)Ljava/lang/Integer;
-    ISTORE 8
-    ASTORE 9
-    ALOAD 9
-    ILOAD 8
-    ALOAD 9
-    ILOAD 8
+    ALOAD 2
+    ILOAD 1
     INVOKEVIRTUAL DefaultingMap.get (Ljava/lang/Object;)Ljava/lang/Object;
     CHECKCAST java/lang/Number
     INVOKEVIRTUAL java/lang/Number.longValue ()J
-    ILOAD 6
-    ALOAD 4
-    INVOKEVIRTUAL Ring.removeCurrent ()Ljava/lang/Object;
-    CHECKCAST java/lang/Number
-    INVOKEVIRTUAL java/lang/Number.intValue ()I
-    IADD
-    INVOKESTATIC java/lang/Integer.valueOf (I)Ljava/lang/Integer;
-    DUP
-    IFNONNULL L18
-    NEW kotlin/TypeCastException
-    DUP
-    LDC "null cannot be cast to non-null type kotlin.Long"
-    INVOKESPECIAL kotlin/TypeCastException.<init> (Ljava/lang/String;)V
-    ATHROW
-   L18
-    CHECKCAST java/lang/Long
-    INVOKEVIRTUAL java/lang/Long.longValue ()J
+    LDC 42
     LADD
     INVOKESTATIC java/lang/Long.valueOf (J)Ljava/lang/Long;
     INVOKEVIRTUAL DefaultingMap.set (Ljava/lang/Object;Ljava/lang/Object;)V
-   L19
-    GOTO L20
-   L11
-    LINENUMBER 90 L11
-    ALOAD 4
-    INVOKEVIRTUAL Ring.moveCW ()V
-   L21
-    LINENUMBER 91 L21
-    ALOAD 4
-    ILOAD 6
-    INVOKESTATIC java/lang/Integer.valueOf (I)Ljava/lang/Integer;
-    INVOKEVIRTUAL Ring.append (Ljava/lang/Object;)V
-   L22
-    LINENUMBER 92 L22
-   L20
-    LINENUMBER 94 L20
-    ILOAD 2
-    IFEQ L23
-    NEW java/lang/StringBuilder
-    DUP
-    INVOKESPECIAL java/lang/StringBuilder.<init> ()V
-    BIPUSH 91
-    INVOKEVIRTUAL java/lang/StringBuilder.append (C)Ljava/lang/StringBuilder;
-    ILOAD 5
-    ICONST_1
-    IADD
-    INVOKEVIRTUAL java/lang/StringBuilder.append (I)Ljava/lang/StringBuilder;
-    LDC "] "
-    INVOKEVIRTUAL java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-    ALOAD 4
-    ICONST_0
-    INVOKESTATIC java/lang/Integer.valueOf (I)Ljava/lang/Integer;
-    INVOKEVIRTUAL Ring.debug (Ljava/lang/Object;)Ljava/lang/String;
-    INVOKEVIRTUAL java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-    INVOKEVIRTUAL java/lang/StringBuilder.toString ()Ljava/lang/String;
-    ASTORE 8
-    NOP
-   L24
-    GETSTATIC java/lang/System.out : Ljava/io/PrintStream;
-    ALOAD 8
-    INVOKEVIRTUAL java/io/PrintStream.println (Ljava/lang/Object;)V
-   L25
-    NOP
-    GOTO L26
-   L26
-   L23
-    LINENUMBER 95 L23
-    ILOAD 5
-    ICONST_1
-    IADD
-    ILOAD 0
-    IREM
-    ISTORE 5
-   L27
-    LINENUMBER 82 L27
-    ILOAD 6
-    ILOAD 7
-    IF_ICMPEQ L8
-    IINC 6 1
-   L28
-    GOTO L9
-   L8
-    LINENUMBER 98 L8
-    ALOAD 3
-    INVOKEVIRTUAL DefaultingMap.getValues ()Ljava/util/Collection;
-    CHECKCAST java/lang/Iterable
-    INVOKESTATIC kotlin/collections/CollectionsKt.max (Ljava/lang/Iterable;)Ljava/lang/Comparable;
-    DUP
-    IFNONNULL L29
-    INVOKESTATIC kotlin/jvm/internal/Intrinsics.throwNpe ()V
-   L29
-    CHECKCAST java/lang/Number
-    INVOKEVIRTUAL java/lang/Number.longValue ()J
-    LRETURN
-   L30
-    LOCALVARIABLE i I L15 L17 8
-    LOCALVARIABLE marble I L10 L28 6
-    LOCALVARIABLE currentPlayer I L3 L30 5
-    LOCALVARIABLE ring LRing; L2 L30 4
-    LOCALVARIABLE playerScores LDefaultingMap; L1 L30 3
-    LOCALVARIABLE numPlayers I L0 L30 0
-    LOCALVARIABLE highestMarble I L0 L30 1
-    LOCALVARIABLE debug Z L0 L30 2
-    MAXSTACK = 8
-    MAXLOCALS = 10
+   L2
+    LINENUMBER 4 L2
+    RETURN
+   L3
+    LOCALVARIABLE m LDefaultingMap; L1 L3 0
+    MAXSTACK = 6
+    MAXLOCALS = 3
 Cause: AFTER mandatory stack transformations: incorrect bytecode
 Element is unknownThe root cause was thrown at: MethodVerifier.kt:28
 bytecode:
    L0
-    LINENUMBER 77 L0
+    LINENUMBER 2 L0
     NEW DefaultingMap
     DUP
     LCONST_0
     INVOKESTATIC java/lang/Long.valueOf (J)Ljava/lang/Long;
     INVOKESPECIAL DefaultingMap.<init> (Ljava/lang/Object;)V
-    ASTORE 3
+    ASTORE 0
    L1
-    LINENUMBER 78 L1
-    NEW Ring
-    DUP
+    LINENUMBER 3 L1
+    ALOAD 0
     ICONST_0
     INVOKESTATIC java/lang/Integer.valueOf (I)Ljava/lang/Integer;
-    INVOKESPECIAL Ring.<init> (Ljava/lang/Object;)V
-    ASTORE 4
-   L2
-    LINENUMBER 79 L2
-    ICONST_0
-    ISTORE 5
-   L3
-    LINENUMBER 80 L3
-    ILOAD 2
-    IFEQ L4
-    NEW java/lang/StringBuilder
-    DUP
-    INVOKESPECIAL java/lang/StringBuilder.<init> ()V
-    LDC "[-] "
-    INVOKEVIRTUAL java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-    ALOAD 4
-    ICONST_0
-    INVOKESTATIC java/lang/Integer.valueOf (I)Ljava/lang/Integer;
-    INVOKEVIRTUAL Ring.debug (Ljava/lang/Object;)Ljava/lang/String;
-    INVOKEVIRTUAL java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-    INVOKEVIRTUAL java/lang/StringBuilder.toString ()Ljava/lang/String;
-    ASTORE 6
-    NOP
-   L5
-    GETSTATIC java/lang/System.out : Ljava/io/PrintStream;
-    ALOAD 6
-    INVOKEVIRTUAL java/io/PrintStream.println (Ljava/lang/Object;)V
-   L6
-    NOP
-    GOTO L7
-   L7
-   L4
-    LINENUMBER 82 L4
-    ICONST_1
-    ISTORE 6
+    ISTORE 1
+    ASTORE 2
+    ALOAD 2
     ILOAD 1
-    ISTORE 7
-    ILOAD 6
-    ILOAD 7
-    IF_ICMPGT L8
-   L9
-   L10
-    LINENUMBER 83 L10
-    ILOAD 6
-    BIPUSH 23
-    IREM
-    IFNE L11
-   L12
-    LINENUMBER 84 L12
-    ICONST_1
-    ISTORE 8
-    BIPUSH 7
-    ISTORE 9
-   L13
-    ILOAD 8
-    ILOAD 9
-    IF_ICMPGT L14
-   L15
-    LINENUMBER 85 L15
-    ALOAD 4
-    INVOKEVIRTUAL Ring.moveCCW ()V
-   L16
-    LINENUMBER 84 L16
-    IINC 8 1
-   L17
-    GOTO L13
-   L14
-    LINENUMBER 88 L14
-    ALOAD 3
-    ILOAD 5
-    INVOKESTATIC java/lang/Integer.valueOf (I)Ljava/lang/Integer;
-    ISTORE 8
-    ASTORE 9
-    ALOAD 9
-    ILOAD 8
-    ALOAD 9
-    ILOAD 8
+    ALOAD 2
+    ILOAD 1
     INVOKEVIRTUAL DefaultingMap.get (Ljava/lang/Object;)Ljava/lang/Object;
     CHECKCAST java/lang/Number
     INVOKEVIRTUAL java/lang/Number.longValue ()J
-    ILOAD 6
-    ALOAD 4
-    INVOKEVIRTUAL Ring.removeCurrent ()Ljava/lang/Object;
-    CHECKCAST java/lang/Number
-    INVOKEVIRTUAL java/lang/Number.intValue ()I
-    IADD
-    INVOKESTATIC java/lang/Integer.valueOf (I)Ljava/lang/Integer;
-    DUP
-    IFNONNULL L18
-    NEW kotlin/TypeCastException
-    DUP
-    LDC "null cannot be cast to non-null type kotlin.Long"
-    INVOKESPECIAL kotlin/TypeCastException.<init> (Ljava/lang/String;)V
-    ATHROW
-   L18
-    CHECKCAST java/lang/Long
-    INVOKEVIRTUAL java/lang/Long.longValue ()J
+    LDC 42
     LADD
     INVOKESTATIC java/lang/Long.valueOf (J)Ljava/lang/Long;
     INVOKEVIRTUAL DefaultingMap.set (Ljava/lang/Object;Ljava/lang/Object;)V
-   L19
-    GOTO L20
-   L11
-    LINENUMBER 90 L11
-    ALOAD 4
-    INVOKEVIRTUAL Ring.moveCW ()V
-   L21
-    LINENUMBER 91 L21
-    ALOAD 4
-    ILOAD 6
-    INVOKESTATIC java/lang/Integer.valueOf (I)Ljava/lang/Integer;
-    INVOKEVIRTUAL Ring.append (Ljava/lang/Object;)V
-   L22
-    LINENUMBER 92 L22
-   L20
-    LINENUMBER 94 L20
-    ILOAD 2
-    IFEQ L23
-    NEW java/lang/StringBuilder
-    DUP
-    INVOKESPECIAL java/lang/StringBuilder.<init> ()V
-    BIPUSH 91
-    INVOKEVIRTUAL java/lang/StringBuilder.append (C)Ljava/lang/StringBuilder;
-    ILOAD 5
-    ICONST_1
-    IADD
-    INVOKEVIRTUAL java/lang/StringBuilder.append (I)Ljava/lang/StringBuilder;
-    LDC "] "
-    INVOKEVIRTUAL java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-    ALOAD 4
-    ICONST_0
-    INVOKESTATIC java/lang/Integer.valueOf (I)Ljava/lang/Integer;
-    INVOKEVIRTUAL Ring.debug (Ljava/lang/Object;)Ljava/lang/String;
-    INVOKEVIRTUAL java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-    INVOKEVIRTUAL java/lang/StringBuilder.toString ()Ljava/lang/String;
-    ASTORE 8
-    NOP
-   L24
-    GETSTATIC java/lang/System.out : Ljava/io/PrintStream;
-    ALOAD 8
-    INVOKEVIRTUAL java/io/PrintStream.println (Ljava/lang/Object;)V
-   L25
-    NOP
-    GOTO L26
-   L26
-   L23
-    LINENUMBER 95 L23
-    ILOAD 5
-    ICONST_1
-    IADD
-    ILOAD 0
-    IREM
-    ISTORE 5
-   L27
-    LINENUMBER 82 L27
-    ILOAD 6
-    ILOAD 7
-    IF_ICMPEQ L8
-    IINC 6 1
-   L28
-    GOTO L9
-   L8
-    LINENUMBER 98 L8
-    ALOAD 3
-    INVOKEVIRTUAL DefaultingMap.getValues ()Ljava/util/Collection;
-    CHECKCAST java/lang/Iterable
-    INVOKESTATIC kotlin/collections/CollectionsKt.max (Ljava/lang/Iterable;)Ljava/lang/Comparable;
-    DUP
-    IFNONNULL L29
-    INVOKESTATIC kotlin/jvm/internal/Intrinsics.throwNpe ()V
-   L29
-    CHECKCAST java/lang/Number
-    INVOKEVIRTUAL java/lang/Number.longValue ()J
-    LRETURN
-   L30
-    LOCALVARIABLE i I L15 L17 8
-    LOCALVARIABLE marble I L10 L28 6
-    LOCALVARIABLE currentPlayer I L3 L30 5
-    LOCALVARIABLE ring LRing; L2 L30 4
-    LOCALVARIABLE playerScores LDefaultingMap; L1 L30 3
-    LOCALVARIABLE numPlayers I L0 L30 0
-    LOCALVARIABLE highestMarble I L0 L30 1
-    LOCALVARIABLE debug Z L0 L30 2
-    MAXSTACK = 8
-    MAXLOCALS = 10
+   L2
+    LINENUMBER 4 L2
+    RETURN
+   L3
+    LOCALVARIABLE m LDefaultingMap; L1 L3 0
+    MAXSTACK = 6
+    MAXLOCALS = 3
 Cause: Back-end (JVM) Internal error: Couldn't transform method node:
-findHighScore (IIZ)J:
+crash ()V:
    L0
-    LINENUMBER 77 L0
+    LINENUMBER 2 L0
     NEW DefaultingMap
     DUP
     LCONST_0
     INVOKESTATIC java/lang/Long.valueOf (J)Ljava/lang/Long;
     INVOKESPECIAL DefaultingMap.<init> (Ljava/lang/Object;)V
-    ASTORE 3
+    ASTORE 0
    L1
-    LINENUMBER 78 L1
-    NEW Ring
-    DUP
+    LINENUMBER 3 L1
+    ALOAD 0
     ICONST_0
     INVOKESTATIC java/lang/Integer.valueOf (I)Ljava/lang/Integer;
-    INVOKESPECIAL Ring.<init> (Ljava/lang/Object;)V
-    ASTORE 4
-   L2
-    LINENUMBER 79 L2
-    ICONST_0
-    ISTORE 5
-   L3
-    LINENUMBER 80 L3
-    ILOAD 2
-    IFEQ L4
-    NEW java/lang/StringBuilder
-    DUP
-    INVOKESPECIAL java/lang/StringBuilder.<init> ()V
-    LDC "[-] "
-    INVOKEVIRTUAL java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-    ALOAD 4
-    ICONST_0
-    INVOKESTATIC java/lang/Integer.valueOf (I)Ljava/lang/Integer;
-    INVOKEVIRTUAL Ring.debug (Ljava/lang/Object;)Ljava/lang/String;
-    INVOKEVIRTUAL java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-    INVOKEVIRTUAL java/lang/StringBuilder.toString ()Ljava/lang/String;
-    ASTORE 6
-    NOP
-   L5
-    GETSTATIC java/lang/System.out : Ljava/io/PrintStream;
-    ALOAD 6
-    INVOKEVIRTUAL java/io/PrintStream.println (Ljava/lang/Object;)V
-   L6
-    NOP
-    GOTO L7
-   L7
-   L4
-    LINENUMBER 82 L4
-    ICONST_1
-    ISTORE 6
+    ISTORE 1
+    ASTORE 2
+    ALOAD 2
     ILOAD 1
-    ISTORE 7
-    ILOAD 6
-    ILOAD 7
-    IF_ICMPGT L8
-   L9
-   L10
-    LINENUMBER 83 L10
-    ILOAD 6
-    BIPUSH 23
-    IREM
-    IFNE L11
-   L12
-    LINENUMBER 84 L12
-    ICONST_1
-    ISTORE 8
-    BIPUSH 7
-    ISTORE 9
-   L13
-    ILOAD 8
-    ILOAD 9
-    IF_ICMPGT L14
-   L15
-    LINENUMBER 85 L15
-    ALOAD 4
-    INVOKEVIRTUAL Ring.moveCCW ()V
-   L16
-    LINENUMBER 84 L16
-    IINC 8 1
-   L17
-    GOTO L13
-   L14
-    LINENUMBER 88 L14
-    ALOAD 3
-    ILOAD 5
-    INVOKESTATIC java/lang/Integer.valueOf (I)Ljava/lang/Integer;
-    ISTORE 8
-    ASTORE 9
-    ALOAD 9
-    ILOAD 8
-    ALOAD 9
-    ILOAD 8
+    ALOAD 2
+    ILOAD 1
     INVOKEVIRTUAL DefaultingMap.get (Ljava/lang/Object;)Ljava/lang/Object;
     CHECKCAST java/lang/Number
     INVOKEVIRTUAL java/lang/Number.longValue ()J
-    ILOAD 6
-    ALOAD 4
-    INVOKEVIRTUAL Ring.removeCurrent ()Ljava/lang/Object;
-    CHECKCAST java/lang/Number
-    INVOKEVIRTUAL java/lang/Number.intValue ()I
-    IADD
-    INVOKESTATIC java/lang/Integer.valueOf (I)Ljava/lang/Integer;
-    DUP
-    IFNONNULL L18
-    NEW kotlin/TypeCastException
-    DUP
-    LDC "null cannot be cast to non-null type kotlin.Long"
-    INVOKESPECIAL kotlin/TypeCastException.<init> (Ljava/lang/String;)V
-    ATHROW
-   L18
-    CHECKCAST java/lang/Long
-    INVOKEVIRTUAL java/lang/Long.longValue ()J
+    LDC 42
     LADD
     INVOKESTATIC java/lang/Long.valueOf (J)Ljava/lang/Long;
     INVOKEVIRTUAL DefaultingMap.set (Ljava/lang/Object;Ljava/lang/Object;)V
-   L19
-    GOTO L20
-   L11
-    LINENUMBER 90 L11
-    ALOAD 4
-    INVOKEVIRTUAL Ring.moveCW ()V
-   L21
-    LINENUMBER 91 L21
-    ALOAD 4
-    ILOAD 6
-    INVOKESTATIC java/lang/Integer.valueOf (I)Ljava/lang/Integer;
-    INVOKEVIRTUAL Ring.append (Ljava/lang/Object;)V
-   L22
-    LINENUMBER 92 L22
-   L20
-    LINENUMBER 94 L20
-    ILOAD 2
-    IFEQ L23
-    NEW java/lang/StringBuilder
-    DUP
-    INVOKESPECIAL java/lang/StringBuilder.<init> ()V
-    BIPUSH 91
-    INVOKEVIRTUAL java/lang/StringBuilder.append (C)Ljava/lang/StringBuilder;
-    ILOAD 5
-    ICONST_1
-    IADD
-    INVOKEVIRTUAL java/lang/StringBuilder.append (I)Ljava/lang/StringBuilder;
-    LDC "] "
-    INVOKEVIRTUAL java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-    ALOAD 4
-    ICONST_0
-    INVOKESTATIC java/lang/Integer.valueOf (I)Ljava/lang/Integer;
-    INVOKEVIRTUAL Ring.debug (Ljava/lang/Object;)Ljava/lang/String;
-    INVOKEVIRTUAL java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-    INVOKEVIRTUAL java/lang/StringBuilder.toString ()Ljava/lang/String;
-    ASTORE 8
-    NOP
-   L24
-    GETSTATIC java/lang/System.out : Ljava/io/PrintStream;
-    ALOAD 8
-    INVOKEVIRTUAL java/io/PrintStream.println (Ljava/lang/Object;)V
-   L25
-    NOP
-    GOTO L26
-   L26
-   L23
-    LINENUMBER 95 L23
-    ILOAD 5
-    ICONST_1
-    IADD
-    ILOAD 0
-    IREM
-    ISTORE 5
-   L27
-    LINENUMBER 82 L27
-    ILOAD 6
-    ILOAD 7
-    IF_ICMPEQ L8
-    IINC 6 1
-   L28
-    GOTO L9
-   L8
-    LINENUMBER 98 L8
-    ALOAD 3
-    INVOKEVIRTUAL DefaultingMap.getValues ()Ljava/util/Collection;
-    CHECKCAST java/lang/Iterable
-    INVOKESTATIC kotlin/collections/CollectionsKt.max (Ljava/lang/Iterable;)Ljava/lang/Comparable;
-    DUP
-    IFNONNULL L29
-    INVOKESTATIC kotlin/jvm/internal/Intrinsics.throwNpe ()V
-   L29
-    CHECKCAST java/lang/Number
-    INVOKEVIRTUAL java/lang/Number.longValue ()J
-    LRETURN
-   L30
-    LOCALVARIABLE i I L15 L17 8
-    LOCALVARIABLE marble I L10 L28 6
-    LOCALVARIABLE currentPlayer I L3 L30 5
-    LOCALVARIABLE ring LRing; L2 L30 4
-    LOCALVARIABLE playerScores LDefaultingMap; L1 L30 3
-    LOCALVARIABLE numPlayers I L0 L30 0
-    LOCALVARIABLE highestMarble I L0 L30 1
-    LOCALVARIABLE debug Z L0 L30 2
-    MAXSTACK = 8
-    MAXLOCALS = 10
+   L2
+    LINENUMBER 4 L2
+    RETURN
+   L3
+    LOCALVARIABLE m LDefaultingMap; L1 L3 0
+    MAXSTACK = 6
+    MAXLOCALS = 3
 Cause: AFTER mandatory stack transformations: incorrect bytecode
 Element is unknownThe root cause was thrown at: MethodVerifier.kt:28
-File being compiled at position: (76,1) in /Users/steve/src/kotlin-compiler-crash/src/main.kt
+File being compiled at position: (1,1) in /Users/steve/src/kotlin-compiler-crash/src/main.kt
 The root cause was thrown at: TransformationMethodVisitor.java:88
 File being compiled at position: file:///Users/steve/src/kotlin-compiler-crash/src/main.kt
 The root cause was thrown at: FunctionCodegen.java:1008
@@ -653,612 +153,114 @@ The root cause was thrown at: FunctionCodegen.java:1008
 	at java.lang.Thread.run(Thread.java:748)
 Caused by: org.jetbrains.kotlin.codegen.CompilationException: Back-end (JVM) Internal error: wrong code generated
 org.jetbrains.kotlin.codegen.CompilationException Back-end (JVM) Internal error: Couldn't transform method node:
-findHighScore (IIZ)J:
+crash ()V:
    L0
-    LINENUMBER 77 L0
+    LINENUMBER 2 L0
     NEW DefaultingMap
     DUP
     LCONST_0
     INVOKESTATIC java/lang/Long.valueOf (J)Ljava/lang/Long;
     INVOKESPECIAL DefaultingMap.<init> (Ljava/lang/Object;)V
-    ASTORE 3
+    ASTORE 0
    L1
-    LINENUMBER 78 L1
-    NEW Ring
-    DUP
+    LINENUMBER 3 L1
+    ALOAD 0
     ICONST_0
     INVOKESTATIC java/lang/Integer.valueOf (I)Ljava/lang/Integer;
-    INVOKESPECIAL Ring.<init> (Ljava/lang/Object;)V
-    ASTORE 4
-   L2
-    LINENUMBER 79 L2
-    ICONST_0
-    ISTORE 5
-   L3
-    LINENUMBER 80 L3
-    ILOAD 2
-    IFEQ L4
-    NEW java/lang/StringBuilder
-    DUP
-    INVOKESPECIAL java/lang/StringBuilder.<init> ()V
-    LDC "[-] "
-    INVOKEVIRTUAL java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-    ALOAD 4
-    ICONST_0
-    INVOKESTATIC java/lang/Integer.valueOf (I)Ljava/lang/Integer;
-    INVOKEVIRTUAL Ring.debug (Ljava/lang/Object;)Ljava/lang/String;
-    INVOKEVIRTUAL java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-    INVOKEVIRTUAL java/lang/StringBuilder.toString ()Ljava/lang/String;
-    ASTORE 6
-    NOP
-   L5
-    GETSTATIC java/lang/System.out : Ljava/io/PrintStream;
-    ALOAD 6
-    INVOKEVIRTUAL java/io/PrintStream.println (Ljava/lang/Object;)V
-   L6
-    NOP
-    GOTO L7
-   L7
-   L4
-    LINENUMBER 82 L4
-    ICONST_1
-    ISTORE 6
+    ISTORE 1
+    ASTORE 2
+    ALOAD 2
     ILOAD 1
-    ISTORE 7
-    ILOAD 6
-    ILOAD 7
-    IF_ICMPGT L8
-   L9
-   L10
-    LINENUMBER 83 L10
-    ILOAD 6
-    BIPUSH 23
-    IREM
-    IFNE L11
-   L12
-    LINENUMBER 84 L12
-    ICONST_1
-    ISTORE 8
-    BIPUSH 7
-    ISTORE 9
-   L13
-    ILOAD 8
-    ILOAD 9
-    IF_ICMPGT L14
-   L15
-    LINENUMBER 85 L15
-    ALOAD 4
-    INVOKEVIRTUAL Ring.moveCCW ()V
-   L16
-    LINENUMBER 84 L16
-    IINC 8 1
-   L17
-    GOTO L13
-   L14
-    LINENUMBER 88 L14
-    ALOAD 3
-    ILOAD 5
-    INVOKESTATIC java/lang/Integer.valueOf (I)Ljava/lang/Integer;
-    ISTORE 8
-    ASTORE 9
-    ALOAD 9
-    ILOAD 8
-    ALOAD 9
-    ILOAD 8
+    ALOAD 2
+    ILOAD 1
     INVOKEVIRTUAL DefaultingMap.get (Ljava/lang/Object;)Ljava/lang/Object;
     CHECKCAST java/lang/Number
     INVOKEVIRTUAL java/lang/Number.longValue ()J
-    ILOAD 6
-    ALOAD 4
-    INVOKEVIRTUAL Ring.removeCurrent ()Ljava/lang/Object;
-    CHECKCAST java/lang/Number
-    INVOKEVIRTUAL java/lang/Number.intValue ()I
-    IADD
-    INVOKESTATIC java/lang/Integer.valueOf (I)Ljava/lang/Integer;
-    DUP
-    IFNONNULL L18
-    NEW kotlin/TypeCastException
-    DUP
-    LDC "null cannot be cast to non-null type kotlin.Long"
-    INVOKESPECIAL kotlin/TypeCastException.<init> (Ljava/lang/String;)V
-    ATHROW
-   L18
-    CHECKCAST java/lang/Long
-    INVOKEVIRTUAL java/lang/Long.longValue ()J
+    LDC 42
     LADD
     INVOKESTATIC java/lang/Long.valueOf (J)Ljava/lang/Long;
     INVOKEVIRTUAL DefaultingMap.set (Ljava/lang/Object;Ljava/lang/Object;)V
-   L19
-    GOTO L20
-   L11
-    LINENUMBER 90 L11
-    ALOAD 4
-    INVOKEVIRTUAL Ring.moveCW ()V
-   L21
-    LINENUMBER 91 L21
-    ALOAD 4
-    ILOAD 6
-    INVOKESTATIC java/lang/Integer.valueOf (I)Ljava/lang/Integer;
-    INVOKEVIRTUAL Ring.append (Ljava/lang/Object;)V
-   L22
-    LINENUMBER 92 L22
-   L20
-    LINENUMBER 94 L20
-    ILOAD 2
-    IFEQ L23
-    NEW java/lang/StringBuilder
-    DUP
-    INVOKESPECIAL java/lang/StringBuilder.<init> ()V
-    BIPUSH 91
-    INVOKEVIRTUAL java/lang/StringBuilder.append (C)Ljava/lang/StringBuilder;
-    ILOAD 5
-    ICONST_1
-    IADD
-    INVOKEVIRTUAL java/lang/StringBuilder.append (I)Ljava/lang/StringBuilder;
-    LDC "] "
-    INVOKEVIRTUAL java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-    ALOAD 4
-    ICONST_0
-    INVOKESTATIC java/lang/Integer.valueOf (I)Ljava/lang/Integer;
-    INVOKEVIRTUAL Ring.debug (Ljava/lang/Object;)Ljava/lang/String;
-    INVOKEVIRTUAL java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-    INVOKEVIRTUAL java/lang/StringBuilder.toString ()Ljava/lang/String;
-    ASTORE 8
-    NOP
-   L24
-    GETSTATIC java/lang/System.out : Ljava/io/PrintStream;
-    ALOAD 8
-    INVOKEVIRTUAL java/io/PrintStream.println (Ljava/lang/Object;)V
-   L25
-    NOP
-    GOTO L26
-   L26
-   L23
-    LINENUMBER 95 L23
-    ILOAD 5
-    ICONST_1
-    IADD
-    ILOAD 0
-    IREM
-    ISTORE 5
-   L27
-    LINENUMBER 82 L27
-    ILOAD 6
-    ILOAD 7
-    IF_ICMPEQ L8
-    IINC 6 1
-   L28
-    GOTO L9
-   L8
-    LINENUMBER 98 L8
-    ALOAD 3
-    INVOKEVIRTUAL DefaultingMap.getValues ()Ljava/util/Collection;
-    CHECKCAST java/lang/Iterable
-    INVOKESTATIC kotlin/collections/CollectionsKt.max (Ljava/lang/Iterable;)Ljava/lang/Comparable;
-    DUP
-    IFNONNULL L29
-    INVOKESTATIC kotlin/jvm/internal/Intrinsics.throwNpe ()V
-   L29
-    CHECKCAST java/lang/Number
-    INVOKEVIRTUAL java/lang/Number.longValue ()J
-    LRETURN
-   L30
-    LOCALVARIABLE i I L15 L17 8
-    LOCALVARIABLE marble I L10 L28 6
-    LOCALVARIABLE currentPlayer I L3 L30 5
-    LOCALVARIABLE ring LRing; L2 L30 4
-    LOCALVARIABLE playerScores LDefaultingMap; L1 L30 3
-    LOCALVARIABLE numPlayers I L0 L30 0
-    LOCALVARIABLE highestMarble I L0 L30 1
-    LOCALVARIABLE debug Z L0 L30 2
-    MAXSTACK = 8
-    MAXLOCALS = 10
+   L2
+    LINENUMBER 4 L2
+    RETURN
+   L3
+    LOCALVARIABLE m LDefaultingMap; L1 L3 0
+    MAXSTACK = 6
+    MAXLOCALS = 3
 Cause: AFTER mandatory stack transformations: incorrect bytecode
 Element is unknownThe root cause was thrown at: MethodVerifier.kt:28
 bytecode:
    L0
-    LINENUMBER 77 L0
+    LINENUMBER 2 L0
     NEW DefaultingMap
     DUP
     LCONST_0
     INVOKESTATIC java/lang/Long.valueOf (J)Ljava/lang/Long;
     INVOKESPECIAL DefaultingMap.<init> (Ljava/lang/Object;)V
-    ASTORE 3
+    ASTORE 0
    L1
-    LINENUMBER 78 L1
-    NEW Ring
-    DUP
+    LINENUMBER 3 L1
+    ALOAD 0
     ICONST_0
     INVOKESTATIC java/lang/Integer.valueOf (I)Ljava/lang/Integer;
-    INVOKESPECIAL Ring.<init> (Ljava/lang/Object;)V
-    ASTORE 4
-   L2
-    LINENUMBER 79 L2
-    ICONST_0
-    ISTORE 5
-   L3
-    LINENUMBER 80 L3
-    ILOAD 2
-    IFEQ L4
-    NEW java/lang/StringBuilder
-    DUP
-    INVOKESPECIAL java/lang/StringBuilder.<init> ()V
-    LDC "[-] "
-    INVOKEVIRTUAL java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-    ALOAD 4
-    ICONST_0
-    INVOKESTATIC java/lang/Integer.valueOf (I)Ljava/lang/Integer;
-    INVOKEVIRTUAL Ring.debug (Ljava/lang/Object;)Ljava/lang/String;
-    INVOKEVIRTUAL java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-    INVOKEVIRTUAL java/lang/StringBuilder.toString ()Ljava/lang/String;
-    ASTORE 6
-    NOP
-   L5
-    GETSTATIC java/lang/System.out : Ljava/io/PrintStream;
-    ALOAD 6
-    INVOKEVIRTUAL java/io/PrintStream.println (Ljava/lang/Object;)V
-   L6
-    NOP
-    GOTO L7
-   L7
-   L4
-    LINENUMBER 82 L4
-    ICONST_1
-    ISTORE 6
+    ISTORE 1
+    ASTORE 2
+    ALOAD 2
     ILOAD 1
-    ISTORE 7
-    ILOAD 6
-    ILOAD 7
-    IF_ICMPGT L8
-   L9
-   L10
-    LINENUMBER 83 L10
-    ILOAD 6
-    BIPUSH 23
-    IREM
-    IFNE L11
-   L12
-    LINENUMBER 84 L12
-    ICONST_1
-    ISTORE 8
-    BIPUSH 7
-    ISTORE 9
-   L13
-    ILOAD 8
-    ILOAD 9
-    IF_ICMPGT L14
-   L15
-    LINENUMBER 85 L15
-    ALOAD 4
-    INVOKEVIRTUAL Ring.moveCCW ()V
-   L16
-    LINENUMBER 84 L16
-    IINC 8 1
-   L17
-    GOTO L13
-   L14
-    LINENUMBER 88 L14
-    ALOAD 3
-    ILOAD 5
-    INVOKESTATIC java/lang/Integer.valueOf (I)Ljava/lang/Integer;
-    ISTORE 8
-    ASTORE 9
-    ALOAD 9
-    ILOAD 8
-    ALOAD 9
-    ILOAD 8
+    ALOAD 2
+    ILOAD 1
     INVOKEVIRTUAL DefaultingMap.get (Ljava/lang/Object;)Ljava/lang/Object;
     CHECKCAST java/lang/Number
     INVOKEVIRTUAL java/lang/Number.longValue ()J
-    ILOAD 6
-    ALOAD 4
-    INVOKEVIRTUAL Ring.removeCurrent ()Ljava/lang/Object;
-    CHECKCAST java/lang/Number
-    INVOKEVIRTUAL java/lang/Number.intValue ()I
-    IADD
-    INVOKESTATIC java/lang/Integer.valueOf (I)Ljava/lang/Integer;
-    DUP
-    IFNONNULL L18
-    NEW kotlin/TypeCastException
-    DUP
-    LDC "null cannot be cast to non-null type kotlin.Long"
-    INVOKESPECIAL kotlin/TypeCastException.<init> (Ljava/lang/String;)V
-    ATHROW
-   L18
-    CHECKCAST java/lang/Long
-    INVOKEVIRTUAL java/lang/Long.longValue ()J
+    LDC 42
     LADD
     INVOKESTATIC java/lang/Long.valueOf (J)Ljava/lang/Long;
     INVOKEVIRTUAL DefaultingMap.set (Ljava/lang/Object;Ljava/lang/Object;)V
-   L19
-    GOTO L20
-   L11
-    LINENUMBER 90 L11
-    ALOAD 4
-    INVOKEVIRTUAL Ring.moveCW ()V
-   L21
-    LINENUMBER 91 L21
-    ALOAD 4
-    ILOAD 6
-    INVOKESTATIC java/lang/Integer.valueOf (I)Ljava/lang/Integer;
-    INVOKEVIRTUAL Ring.append (Ljava/lang/Object;)V
-   L22
-    LINENUMBER 92 L22
-   L20
-    LINENUMBER 94 L20
-    ILOAD 2
-    IFEQ L23
-    NEW java/lang/StringBuilder
-    DUP
-    INVOKESPECIAL java/lang/StringBuilder.<init> ()V
-    BIPUSH 91
-    INVOKEVIRTUAL java/lang/StringBuilder.append (C)Ljava/lang/StringBuilder;
-    ILOAD 5
-    ICONST_1
-    IADD
-    INVOKEVIRTUAL java/lang/StringBuilder.append (I)Ljava/lang/StringBuilder;
-    LDC "] "
-    INVOKEVIRTUAL java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-    ALOAD 4
-    ICONST_0
-    INVOKESTATIC java/lang/Integer.valueOf (I)Ljava/lang/Integer;
-    INVOKEVIRTUAL Ring.debug (Ljava/lang/Object;)Ljava/lang/String;
-    INVOKEVIRTUAL java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-    INVOKEVIRTUAL java/lang/StringBuilder.toString ()Ljava/lang/String;
-    ASTORE 8
-    NOP
-   L24
-    GETSTATIC java/lang/System.out : Ljava/io/PrintStream;
-    ALOAD 8
-    INVOKEVIRTUAL java/io/PrintStream.println (Ljava/lang/Object;)V
-   L25
-    NOP
-    GOTO L26
-   L26
-   L23
-    LINENUMBER 95 L23
-    ILOAD 5
-    ICONST_1
-    IADD
-    ILOAD 0
-    IREM
-    ISTORE 5
-   L27
-    LINENUMBER 82 L27
-    ILOAD 6
-    ILOAD 7
-    IF_ICMPEQ L8
-    IINC 6 1
-   L28
-    GOTO L9
-   L8
-    LINENUMBER 98 L8
-    ALOAD 3
-    INVOKEVIRTUAL DefaultingMap.getValues ()Ljava/util/Collection;
-    CHECKCAST java/lang/Iterable
-    INVOKESTATIC kotlin/collections/CollectionsKt.max (Ljava/lang/Iterable;)Ljava/lang/Comparable;
-    DUP
-    IFNONNULL L29
-    INVOKESTATIC kotlin/jvm/internal/Intrinsics.throwNpe ()V
-   L29
-    CHECKCAST java/lang/Number
-    INVOKEVIRTUAL java/lang/Number.longValue ()J
-    LRETURN
-   L30
-    LOCALVARIABLE i I L15 L17 8
-    LOCALVARIABLE marble I L10 L28 6
-    LOCALVARIABLE currentPlayer I L3 L30 5
-    LOCALVARIABLE ring LRing; L2 L30 4
-    LOCALVARIABLE playerScores LDefaultingMap; L1 L30 3
-    LOCALVARIABLE numPlayers I L0 L30 0
-    LOCALVARIABLE highestMarble I L0 L30 1
-    LOCALVARIABLE debug Z L0 L30 2
-    MAXSTACK = 8
-    MAXLOCALS = 10
+   L2
+    LINENUMBER 4 L2
+    RETURN
+   L3
+    LOCALVARIABLE m LDefaultingMap; L1 L3 0
+    MAXSTACK = 6
+    MAXLOCALS = 3
 Cause: Back-end (JVM) Internal error: Couldn't transform method node:
-findHighScore (IIZ)J:
+crash ()V:
    L0
-    LINENUMBER 77 L0
+    LINENUMBER 2 L0
     NEW DefaultingMap
     DUP
     LCONST_0
     INVOKESTATIC java/lang/Long.valueOf (J)Ljava/lang/Long;
     INVOKESPECIAL DefaultingMap.<init> (Ljava/lang/Object;)V
-    ASTORE 3
+    ASTORE 0
    L1
-    LINENUMBER 78 L1
-    NEW Ring
-    DUP
+    LINENUMBER 3 L1
+    ALOAD 0
     ICONST_0
     INVOKESTATIC java/lang/Integer.valueOf (I)Ljava/lang/Integer;
-    INVOKESPECIAL Ring.<init> (Ljava/lang/Object;)V
-    ASTORE 4
-   L2
-    LINENUMBER 79 L2
-    ICONST_0
-    ISTORE 5
-   L3
-    LINENUMBER 80 L3
-    ILOAD 2
-    IFEQ L4
-    NEW java/lang/StringBuilder
-    DUP
-    INVOKESPECIAL java/lang/StringBuilder.<init> ()V
-    LDC "[-] "
-    INVOKEVIRTUAL java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-    ALOAD 4
-    ICONST_0
-    INVOKESTATIC java/lang/Integer.valueOf (I)Ljava/lang/Integer;
-    INVOKEVIRTUAL Ring.debug (Ljava/lang/Object;)Ljava/lang/String;
-    INVOKEVIRTUAL java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-    INVOKEVIRTUAL java/lang/StringBuilder.toString ()Ljava/lang/String;
-    ASTORE 6
-    NOP
-   L5
-    GETSTATIC java/lang/System.out : Ljava/io/PrintStream;
-    ALOAD 6
-    INVOKEVIRTUAL java/io/PrintStream.println (Ljava/lang/Object;)V
-   L6
-    NOP
-    GOTO L7
-   L7
-   L4
-    LINENUMBER 82 L4
-    ICONST_1
-    ISTORE 6
+    ISTORE 1
+    ASTORE 2
+    ALOAD 2
     ILOAD 1
-    ISTORE 7
-    ILOAD 6
-    ILOAD 7
-    IF_ICMPGT L8
-   L9
-   L10
-    LINENUMBER 83 L10
-    ILOAD 6
-    BIPUSH 23
-    IREM
-    IFNE L11
-   L12
-    LINENUMBER 84 L12
-    ICONST_1
-    ISTORE 8
-    BIPUSH 7
-    ISTORE 9
-   L13
-    ILOAD 8
-    ILOAD 9
-    IF_ICMPGT L14
-   L15
-    LINENUMBER 85 L15
-    ALOAD 4
-    INVOKEVIRTUAL Ring.moveCCW ()V
-   L16
-    LINENUMBER 84 L16
-    IINC 8 1
-   L17
-    GOTO L13
-   L14
-    LINENUMBER 88 L14
-    ALOAD 3
-    ILOAD 5
-    INVOKESTATIC java/lang/Integer.valueOf (I)Ljava/lang/Integer;
-    ISTORE 8
-    ASTORE 9
-    ALOAD 9
-    ILOAD 8
-    ALOAD 9
-    ILOAD 8
+    ALOAD 2
+    ILOAD 1
     INVOKEVIRTUAL DefaultingMap.get (Ljava/lang/Object;)Ljava/lang/Object;
     CHECKCAST java/lang/Number
     INVOKEVIRTUAL java/lang/Number.longValue ()J
-    ILOAD 6
-    ALOAD 4
-    INVOKEVIRTUAL Ring.removeCurrent ()Ljava/lang/Object;
-    CHECKCAST java/lang/Number
-    INVOKEVIRTUAL java/lang/Number.intValue ()I
-    IADD
-    INVOKESTATIC java/lang/Integer.valueOf (I)Ljava/lang/Integer;
-    DUP
-    IFNONNULL L18
-    NEW kotlin/TypeCastException
-    DUP
-    LDC "null cannot be cast to non-null type kotlin.Long"
-    INVOKESPECIAL kotlin/TypeCastException.<init> (Ljava/lang/String;)V
-    ATHROW
-   L18
-    CHECKCAST java/lang/Long
-    INVOKEVIRTUAL java/lang/Long.longValue ()J
+    LDC 42
     LADD
     INVOKESTATIC java/lang/Long.valueOf (J)Ljava/lang/Long;
     INVOKEVIRTUAL DefaultingMap.set (Ljava/lang/Object;Ljava/lang/Object;)V
-   L19
-    GOTO L20
-   L11
-    LINENUMBER 90 L11
-    ALOAD 4
-    INVOKEVIRTUAL Ring.moveCW ()V
-   L21
-    LINENUMBER 91 L21
-    ALOAD 4
-    ILOAD 6
-    INVOKESTATIC java/lang/Integer.valueOf (I)Ljava/lang/Integer;
-    INVOKEVIRTUAL Ring.append (Ljava/lang/Object;)V
-   L22
-    LINENUMBER 92 L22
-   L20
-    LINENUMBER 94 L20
-    ILOAD 2
-    IFEQ L23
-    NEW java/lang/StringBuilder
-    DUP
-    INVOKESPECIAL java/lang/StringBuilder.<init> ()V
-    BIPUSH 91
-    INVOKEVIRTUAL java/lang/StringBuilder.append (C)Ljava/lang/StringBuilder;
-    ILOAD 5
-    ICONST_1
-    IADD
-    INVOKEVIRTUAL java/lang/StringBuilder.append (I)Ljava/lang/StringBuilder;
-    LDC "] "
-    INVOKEVIRTUAL java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-    ALOAD 4
-    ICONST_0
-    INVOKESTATIC java/lang/Integer.valueOf (I)Ljava/lang/Integer;
-    INVOKEVIRTUAL Ring.debug (Ljava/lang/Object;)Ljava/lang/String;
-    INVOKEVIRTUAL java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-    INVOKEVIRTUAL java/lang/StringBuilder.toString ()Ljava/lang/String;
-    ASTORE 8
-    NOP
-   L24
-    GETSTATIC java/lang/System.out : Ljava/io/PrintStream;
-    ALOAD 8
-    INVOKEVIRTUAL java/io/PrintStream.println (Ljava/lang/Object;)V
-   L25
-    NOP
-    GOTO L26
-   L26
-   L23
-    LINENUMBER 95 L23
-    ILOAD 5
-    ICONST_1
-    IADD
-    ILOAD 0
-    IREM
-    ISTORE 5
-   L27
-    LINENUMBER 82 L27
-    ILOAD 6
-    ILOAD 7
-    IF_ICMPEQ L8
-    IINC 6 1
-   L28
-    GOTO L9
-   L8
-    LINENUMBER 98 L8
-    ALOAD 3
-    INVOKEVIRTUAL DefaultingMap.getValues ()Ljava/util/Collection;
-    CHECKCAST java/lang/Iterable
-    INVOKESTATIC kotlin/collections/CollectionsKt.max (Ljava/lang/Iterable;)Ljava/lang/Comparable;
-    DUP
-    IFNONNULL L29
-    INVOKESTATIC kotlin/jvm/internal/Intrinsics.throwNpe ()V
-   L29
-    CHECKCAST java/lang/Number
-    INVOKEVIRTUAL java/lang/Number.longValue ()J
-    LRETURN
-   L30
-    LOCALVARIABLE i I L15 L17 8
-    LOCALVARIABLE marble I L10 L28 6
-    LOCALVARIABLE currentPlayer I L3 L30 5
-    LOCALVARIABLE ring LRing; L2 L30 4
-    LOCALVARIABLE playerScores LDefaultingMap; L1 L30 3
-    LOCALVARIABLE numPlayers I L0 L30 0
-    LOCALVARIABLE highestMarble I L0 L30 1
-    LOCALVARIABLE debug Z L0 L30 2
-    MAXSTACK = 8
-    MAXLOCALS = 10
+   L2
+    LINENUMBER 4 L2
+    RETURN
+   L3
+    LOCALVARIABLE m LDefaultingMap; L1 L3 0
+    MAXSTACK = 6
+    MAXLOCALS = 3
 Cause: AFTER mandatory stack transformations: incorrect bytecode
 Element is unknownThe root cause was thrown at: MethodVerifier.kt:28
-File being compiled at position: (76,1) in /Users/steve/src/kotlin-compiler-crash/src/main.kt
+File being compiled at position: (1,1) in /Users/steve/src/kotlin-compiler-crash/src/main.kt
 The root cause was thrown at: TransformationMethodVisitor.java:88
 	at org.jetbrains.kotlin.codegen.FunctionCodegen.endVisit(FunctionCodegen.java:1008)
 	at org.jetbrains.kotlin.codegen.FunctionCodegen.generateMethodBody(FunctionCodegen.java:412)
@@ -1272,206 +274,40 @@ The root cause was thrown at: TransformationMethodVisitor.java:88
 	at org.jetbrains.kotlin.codegen.PackageCodegenImpl.generate(PackageCodegenImpl.java:66)
 	... 35 more
 Caused by: org.jetbrains.kotlin.codegen.CompilationException: Back-end (JVM) Internal error: Couldn't transform method node:
-findHighScore (IIZ)J:
+crash ()V:
    L0
-    LINENUMBER 77 L0
+    LINENUMBER 2 L0
     NEW DefaultingMap
     DUP
     LCONST_0
     INVOKESTATIC java/lang/Long.valueOf (J)Ljava/lang/Long;
     INVOKESPECIAL DefaultingMap.<init> (Ljava/lang/Object;)V
-    ASTORE 3
+    ASTORE 0
    L1
-    LINENUMBER 78 L1
-    NEW Ring
-    DUP
+    LINENUMBER 3 L1
+    ALOAD 0
     ICONST_0
     INVOKESTATIC java/lang/Integer.valueOf (I)Ljava/lang/Integer;
-    INVOKESPECIAL Ring.<init> (Ljava/lang/Object;)V
-    ASTORE 4
-   L2
-    LINENUMBER 79 L2
-    ICONST_0
-    ISTORE 5
-   L3
-    LINENUMBER 80 L3
-    ILOAD 2
-    IFEQ L4
-    NEW java/lang/StringBuilder
-    DUP
-    INVOKESPECIAL java/lang/StringBuilder.<init> ()V
-    LDC "[-] "
-    INVOKEVIRTUAL java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-    ALOAD 4
-    ICONST_0
-    INVOKESTATIC java/lang/Integer.valueOf (I)Ljava/lang/Integer;
-    INVOKEVIRTUAL Ring.debug (Ljava/lang/Object;)Ljava/lang/String;
-    INVOKEVIRTUAL java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-    INVOKEVIRTUAL java/lang/StringBuilder.toString ()Ljava/lang/String;
-    ASTORE 6
-    NOP
-   L5
-    GETSTATIC java/lang/System.out : Ljava/io/PrintStream;
-    ALOAD 6
-    INVOKEVIRTUAL java/io/PrintStream.println (Ljava/lang/Object;)V
-   L6
-    NOP
-    GOTO L7
-   L7
-   L4
-    LINENUMBER 82 L4
-    ICONST_1
-    ISTORE 6
+    ISTORE 1
+    ASTORE 2
+    ALOAD 2
     ILOAD 1
-    ISTORE 7
-    ILOAD 6
-    ILOAD 7
-    IF_ICMPGT L8
-   L9
-   L10
-    LINENUMBER 83 L10
-    ILOAD 6
-    BIPUSH 23
-    IREM
-    IFNE L11
-   L12
-    LINENUMBER 84 L12
-    ICONST_1
-    ISTORE 8
-    BIPUSH 7
-    ISTORE 9
-   L13
-    ILOAD 8
-    ILOAD 9
-    IF_ICMPGT L14
-   L15
-    LINENUMBER 85 L15
-    ALOAD 4
-    INVOKEVIRTUAL Ring.moveCCW ()V
-   L16
-    LINENUMBER 84 L16
-    IINC 8 1
-   L17
-    GOTO L13
-   L14
-    LINENUMBER 88 L14
-    ALOAD 3
-    ILOAD 5
-    INVOKESTATIC java/lang/Integer.valueOf (I)Ljava/lang/Integer;
-    ISTORE 8
-    ASTORE 9
-    ALOAD 9
-    ILOAD 8
-    ALOAD 9
-    ILOAD 8
+    ALOAD 2
+    ILOAD 1
     INVOKEVIRTUAL DefaultingMap.get (Ljava/lang/Object;)Ljava/lang/Object;
     CHECKCAST java/lang/Number
     INVOKEVIRTUAL java/lang/Number.longValue ()J
-    ILOAD 6
-    ALOAD 4
-    INVOKEVIRTUAL Ring.removeCurrent ()Ljava/lang/Object;
-    CHECKCAST java/lang/Number
-    INVOKEVIRTUAL java/lang/Number.intValue ()I
-    IADD
-    INVOKESTATIC java/lang/Integer.valueOf (I)Ljava/lang/Integer;
-    DUP
-    IFNONNULL L18
-    NEW kotlin/TypeCastException
-    DUP
-    LDC "null cannot be cast to non-null type kotlin.Long"
-    INVOKESPECIAL kotlin/TypeCastException.<init> (Ljava/lang/String;)V
-    ATHROW
-   L18
-    CHECKCAST java/lang/Long
-    INVOKEVIRTUAL java/lang/Long.longValue ()J
+    LDC 42
     LADD
     INVOKESTATIC java/lang/Long.valueOf (J)Ljava/lang/Long;
     INVOKEVIRTUAL DefaultingMap.set (Ljava/lang/Object;Ljava/lang/Object;)V
-   L19
-    GOTO L20
-   L11
-    LINENUMBER 90 L11
-    ALOAD 4
-    INVOKEVIRTUAL Ring.moveCW ()V
-   L21
-    LINENUMBER 91 L21
-    ALOAD 4
-    ILOAD 6
-    INVOKESTATIC java/lang/Integer.valueOf (I)Ljava/lang/Integer;
-    INVOKEVIRTUAL Ring.append (Ljava/lang/Object;)V
-   L22
-    LINENUMBER 92 L22
-   L20
-    LINENUMBER 94 L20
-    ILOAD 2
-    IFEQ L23
-    NEW java/lang/StringBuilder
-    DUP
-    INVOKESPECIAL java/lang/StringBuilder.<init> ()V
-    BIPUSH 91
-    INVOKEVIRTUAL java/lang/StringBuilder.append (C)Ljava/lang/StringBuilder;
-    ILOAD 5
-    ICONST_1
-    IADD
-    INVOKEVIRTUAL java/lang/StringBuilder.append (I)Ljava/lang/StringBuilder;
-    LDC "] "
-    INVOKEVIRTUAL java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-    ALOAD 4
-    ICONST_0
-    INVOKESTATIC java/lang/Integer.valueOf (I)Ljava/lang/Integer;
-    INVOKEVIRTUAL Ring.debug (Ljava/lang/Object;)Ljava/lang/String;
-    INVOKEVIRTUAL java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-    INVOKEVIRTUAL java/lang/StringBuilder.toString ()Ljava/lang/String;
-    ASTORE 8
-    NOP
-   L24
-    GETSTATIC java/lang/System.out : Ljava/io/PrintStream;
-    ALOAD 8
-    INVOKEVIRTUAL java/io/PrintStream.println (Ljava/lang/Object;)V
-   L25
-    NOP
-    GOTO L26
-   L26
-   L23
-    LINENUMBER 95 L23
-    ILOAD 5
-    ICONST_1
-    IADD
-    ILOAD 0
-    IREM
-    ISTORE 5
-   L27
-    LINENUMBER 82 L27
-    ILOAD 6
-    ILOAD 7
-    IF_ICMPEQ L8
-    IINC 6 1
-   L28
-    GOTO L9
-   L8
-    LINENUMBER 98 L8
-    ALOAD 3
-    INVOKEVIRTUAL DefaultingMap.getValues ()Ljava/util/Collection;
-    CHECKCAST java/lang/Iterable
-    INVOKESTATIC kotlin/collections/CollectionsKt.max (Ljava/lang/Iterable;)Ljava/lang/Comparable;
-    DUP
-    IFNONNULL L29
-    INVOKESTATIC kotlin/jvm/internal/Intrinsics.throwNpe ()V
-   L29
-    CHECKCAST java/lang/Number
-    INVOKEVIRTUAL java/lang/Number.longValue ()J
-    LRETURN
-   L30
-    LOCALVARIABLE i I L15 L17 8
-    LOCALVARIABLE marble I L10 L28 6
-    LOCALVARIABLE currentPlayer I L3 L30 5
-    LOCALVARIABLE ring LRing; L2 L30 4
-    LOCALVARIABLE playerScores LDefaultingMap; L1 L30 3
-    LOCALVARIABLE numPlayers I L0 L30 0
-    LOCALVARIABLE highestMarble I L0 L30 1
-    LOCALVARIABLE debug Z L0 L30 2
-    MAXSTACK = 8
-    MAXLOCALS = 10
+   L2
+    LINENUMBER 4 L2
+    RETURN
+   L3
+    LOCALVARIABLE m LDefaultingMap; L1 L3 0
+    MAXSTACK = 6
+    MAXLOCALS = 3
 Cause: AFTER mandatory stack transformations: incorrect bytecode
 Element is unknownThe root cause was thrown at: MethodVerifier.kt:28
 	at org.jetbrains.kotlin.codegen.TransformationMethodVisitor.visitEnd(TransformationMethodVisitor.java:88)
@@ -1483,12 +319,12 @@ Caused by: java.lang.AssertionError: AFTER mandatory stack transformations: inco
 	at org.jetbrains.kotlin.codegen.optimization.OptimizationMethodVisitor.performTransformations(OptimizationMethodVisitor.kt:44)
 	at org.jetbrains.kotlin.codegen.TransformationMethodVisitor.visitEnd(TransformationMethodVisitor.java:65)
 	... 45 more
-Caused by: java.lang.RuntimeException: org.jetbrains.org.objectweb.asm.tree.analysis.AnalyzerException: Error at instruction 85: Expected I, but found R
+Caused by: java.lang.RuntimeException: org.jetbrains.org.objectweb.asm.tree.analysis.AnalyzerException: Error at instruction 13: Expected I, but found R
 	at org.jetbrains.kotlin.codegen.optimization.transformer.MethodTransformer.runAnalyzer(MethodTransformer.java:34)
 	at org.jetbrains.kotlin.codegen.optimization.transformer.MethodTransformer.analyze(MethodTransformer.java:44)
 	at org.jetbrains.kotlin.codegen.optimization.MethodVerifier.transform(MethodVerifier.kt:26)
 	... 48 more
-Caused by: org.jetbrains.org.objectweb.asm.tree.analysis.AnalyzerException: Error at instruction 85: Expected I, but found R
+Caused by: org.jetbrains.org.objectweb.asm.tree.analysis.AnalyzerException: Error at instruction 13: Expected I, but found R
 	at org.jetbrains.org.objectweb.asm.tree.analysis.Analyzer.analyze(Analyzer.java:295)
 	at org.jetbrains.kotlin.codegen.optimization.transformer.MethodTransformer.runAnalyzer(MethodTransformer.java:31)
 	... 50 more
