@@ -5,15 +5,13 @@ Cause: Back-end (JVM) Internal error: wrong code generated
 org.jetbrains.kotlin.codegen.CompilationException Back-end (JVM) Internal error: Couldn't transform method node:
 crash ()V:
    L0
-    LINENUMBER 17 L0
+    LINENUMBER 9 L0
     NEW DefaultingMap
     DUP
-    LCONST_0
-    INVOKESTATIC java/lang/Long.valueOf (J)Ljava/lang/Long;
-    INVOKESPECIAL DefaultingMap.<init> (Ljava/lang/Object;)V
+    INVOKESPECIAL DefaultingMap.<init> ()V
     ASTORE 0
    L1
-    LINENUMBER 18 L1
+    LINENUMBER 10 L1
     ALOAD 0
     ICONST_0
     INVOKESTATIC java/lang/Integer.valueOf (I)Ljava/lang/Integer;
@@ -23,15 +21,12 @@ crash ()V:
     ILOAD 1
     ALOAD 2
     ILOAD 1
-    INVOKEVIRTUAL DefaultingMap.get (Ljava/lang/Object;)Ljava/lang/Object;
-    CHECKCAST java/lang/Number
-    INVOKEVIRTUAL java/lang/Number.longValue ()J
+    INVOKEVIRTUAL DefaultingMap.get (Ljava/lang/Object;)J
     LDC 42
     LADD
-    INVOKESTATIC java/lang/Long.valueOf (J)Ljava/lang/Long;
-    INVOKEVIRTUAL DefaultingMap.set (Ljava/lang/Object;Ljava/lang/Object;)V
+    INVOKEVIRTUAL DefaultingMap.set (Ljava/lang/Object;J)V
    L2
-    LINENUMBER 19 L2
+    LINENUMBER 11 L2
     RETURN
    L3
     LOCALVARIABLE m LDefaultingMap; L1 L3 0
@@ -41,15 +36,13 @@ Cause: AFTER mandatory stack transformations: incorrect bytecode
 Element is unknownThe root cause was thrown at: MethodVerifier.kt:28
 bytecode:
    L0
-    LINENUMBER 17 L0
+    LINENUMBER 9 L0
     NEW DefaultingMap
     DUP
-    LCONST_0
-    INVOKESTATIC java/lang/Long.valueOf (J)Ljava/lang/Long;
-    INVOKESPECIAL DefaultingMap.<init> (Ljava/lang/Object;)V
+    INVOKESPECIAL DefaultingMap.<init> ()V
     ASTORE 0
    L1
-    LINENUMBER 18 L1
+    LINENUMBER 10 L1
     ALOAD 0
     ICONST_0
     INVOKESTATIC java/lang/Integer.valueOf (I)Ljava/lang/Integer;
@@ -59,15 +52,12 @@ bytecode:
     ILOAD 1
     ALOAD 2
     ILOAD 1
-    INVOKEVIRTUAL DefaultingMap.get (Ljava/lang/Object;)Ljava/lang/Object;
-    CHECKCAST java/lang/Number
-    INVOKEVIRTUAL java/lang/Number.longValue ()J
+    INVOKEVIRTUAL DefaultingMap.get (Ljava/lang/Object;)J
     LDC 42
     LADD
-    INVOKESTATIC java/lang/Long.valueOf (J)Ljava/lang/Long;
-    INVOKEVIRTUAL DefaultingMap.set (Ljava/lang/Object;Ljava/lang/Object;)V
+    INVOKEVIRTUAL DefaultingMap.set (Ljava/lang/Object;J)V
    L2
-    LINENUMBER 19 L2
+    LINENUMBER 11 L2
     RETURN
    L3
     LOCALVARIABLE m LDefaultingMap; L1 L3 0
@@ -76,15 +66,13 @@ bytecode:
 Cause: Back-end (JVM) Internal error: Couldn't transform method node:
 crash ()V:
    L0
-    LINENUMBER 17 L0
+    LINENUMBER 9 L0
     NEW DefaultingMap
     DUP
-    LCONST_0
-    INVOKESTATIC java/lang/Long.valueOf (J)Ljava/lang/Long;
-    INVOKESPECIAL DefaultingMap.<init> (Ljava/lang/Object;)V
+    INVOKESPECIAL DefaultingMap.<init> ()V
     ASTORE 0
    L1
-    LINENUMBER 18 L1
+    LINENUMBER 10 L1
     ALOAD 0
     ICONST_0
     INVOKESTATIC java/lang/Integer.valueOf (I)Ljava/lang/Integer;
@@ -94,15 +82,12 @@ crash ()V:
     ILOAD 1
     ALOAD 2
     ILOAD 1
-    INVOKEVIRTUAL DefaultingMap.get (Ljava/lang/Object;)Ljava/lang/Object;
-    CHECKCAST java/lang/Number
-    INVOKEVIRTUAL java/lang/Number.longValue ()J
+    INVOKEVIRTUAL DefaultingMap.get (Ljava/lang/Object;)J
     LDC 42
     LADD
-    INVOKESTATIC java/lang/Long.valueOf (J)Ljava/lang/Long;
-    INVOKEVIRTUAL DefaultingMap.set (Ljava/lang/Object;Ljava/lang/Object;)V
+    INVOKEVIRTUAL DefaultingMap.set (Ljava/lang/Object;J)V
    L2
-    LINENUMBER 19 L2
+    LINENUMBER 11 L2
     RETURN
    L3
     LOCALVARIABLE m LDefaultingMap; L1 L3 0
@@ -110,7 +95,7 @@ crash ()V:
     MAXLOCALS = 3
 Cause: AFTER mandatory stack transformations: incorrect bytecode
 Element is unknownThe root cause was thrown at: MethodVerifier.kt:28
-File being compiled at position: (16,1) in /Users/steve/src/kotlin-compiler-crash/src/DefaultingMap.kt
+File being compiled at position: (8,1) in /Users/steve/src/kotlin-compiler-crash/src/DefaultingMap.kt
 The root cause was thrown at: TransformationMethodVisitor.java:88
 File being compiled at position: file:///Users/steve/src/kotlin-compiler-crash/src/DefaultingMap.kt
 The root cause was thrown at: FunctionCodegen.java:1008
@@ -155,15 +140,13 @@ Caused by: org.jetbrains.kotlin.codegen.CompilationException: Back-end (JVM) Int
 org.jetbrains.kotlin.codegen.CompilationException Back-end (JVM) Internal error: Couldn't transform method node:
 crash ()V:
    L0
-    LINENUMBER 17 L0
+    LINENUMBER 9 L0
     NEW DefaultingMap
     DUP
-    LCONST_0
-    INVOKESTATIC java/lang/Long.valueOf (J)Ljava/lang/Long;
-    INVOKESPECIAL DefaultingMap.<init> (Ljava/lang/Object;)V
+    INVOKESPECIAL DefaultingMap.<init> ()V
     ASTORE 0
    L1
-    LINENUMBER 18 L1
+    LINENUMBER 10 L1
     ALOAD 0
     ICONST_0
     INVOKESTATIC java/lang/Integer.valueOf (I)Ljava/lang/Integer;
@@ -173,15 +156,12 @@ crash ()V:
     ILOAD 1
     ALOAD 2
     ILOAD 1
-    INVOKEVIRTUAL DefaultingMap.get (Ljava/lang/Object;)Ljava/lang/Object;
-    CHECKCAST java/lang/Number
-    INVOKEVIRTUAL java/lang/Number.longValue ()J
+    INVOKEVIRTUAL DefaultingMap.get (Ljava/lang/Object;)J
     LDC 42
     LADD
-    INVOKESTATIC java/lang/Long.valueOf (J)Ljava/lang/Long;
-    INVOKEVIRTUAL DefaultingMap.set (Ljava/lang/Object;Ljava/lang/Object;)V
+    INVOKEVIRTUAL DefaultingMap.set (Ljava/lang/Object;J)V
    L2
-    LINENUMBER 19 L2
+    LINENUMBER 11 L2
     RETURN
    L3
     LOCALVARIABLE m LDefaultingMap; L1 L3 0
@@ -191,15 +171,13 @@ Cause: AFTER mandatory stack transformations: incorrect bytecode
 Element is unknownThe root cause was thrown at: MethodVerifier.kt:28
 bytecode:
    L0
-    LINENUMBER 17 L0
+    LINENUMBER 9 L0
     NEW DefaultingMap
     DUP
-    LCONST_0
-    INVOKESTATIC java/lang/Long.valueOf (J)Ljava/lang/Long;
-    INVOKESPECIAL DefaultingMap.<init> (Ljava/lang/Object;)V
+    INVOKESPECIAL DefaultingMap.<init> ()V
     ASTORE 0
    L1
-    LINENUMBER 18 L1
+    LINENUMBER 10 L1
     ALOAD 0
     ICONST_0
     INVOKESTATIC java/lang/Integer.valueOf (I)Ljava/lang/Integer;
@@ -209,15 +187,12 @@ bytecode:
     ILOAD 1
     ALOAD 2
     ILOAD 1
-    INVOKEVIRTUAL DefaultingMap.get (Ljava/lang/Object;)Ljava/lang/Object;
-    CHECKCAST java/lang/Number
-    INVOKEVIRTUAL java/lang/Number.longValue ()J
+    INVOKEVIRTUAL DefaultingMap.get (Ljava/lang/Object;)J
     LDC 42
     LADD
-    INVOKESTATIC java/lang/Long.valueOf (J)Ljava/lang/Long;
-    INVOKEVIRTUAL DefaultingMap.set (Ljava/lang/Object;Ljava/lang/Object;)V
+    INVOKEVIRTUAL DefaultingMap.set (Ljava/lang/Object;J)V
    L2
-    LINENUMBER 19 L2
+    LINENUMBER 11 L2
     RETURN
    L3
     LOCALVARIABLE m LDefaultingMap; L1 L3 0
@@ -226,15 +201,13 @@ bytecode:
 Cause: Back-end (JVM) Internal error: Couldn't transform method node:
 crash ()V:
    L0
-    LINENUMBER 17 L0
+    LINENUMBER 9 L0
     NEW DefaultingMap
     DUP
-    LCONST_0
-    INVOKESTATIC java/lang/Long.valueOf (J)Ljava/lang/Long;
-    INVOKESPECIAL DefaultingMap.<init> (Ljava/lang/Object;)V
+    INVOKESPECIAL DefaultingMap.<init> ()V
     ASTORE 0
    L1
-    LINENUMBER 18 L1
+    LINENUMBER 10 L1
     ALOAD 0
     ICONST_0
     INVOKESTATIC java/lang/Integer.valueOf (I)Ljava/lang/Integer;
@@ -244,15 +217,12 @@ crash ()V:
     ILOAD 1
     ALOAD 2
     ILOAD 1
-    INVOKEVIRTUAL DefaultingMap.get (Ljava/lang/Object;)Ljava/lang/Object;
-    CHECKCAST java/lang/Number
-    INVOKEVIRTUAL java/lang/Number.longValue ()J
+    INVOKEVIRTUAL DefaultingMap.get (Ljava/lang/Object;)J
     LDC 42
     LADD
-    INVOKESTATIC java/lang/Long.valueOf (J)Ljava/lang/Long;
-    INVOKEVIRTUAL DefaultingMap.set (Ljava/lang/Object;Ljava/lang/Object;)V
+    INVOKEVIRTUAL DefaultingMap.set (Ljava/lang/Object;J)V
    L2
-    LINENUMBER 19 L2
+    LINENUMBER 11 L2
     RETURN
    L3
     LOCALVARIABLE m LDefaultingMap; L1 L3 0
@@ -260,7 +230,7 @@ crash ()V:
     MAXLOCALS = 3
 Cause: AFTER mandatory stack transformations: incorrect bytecode
 Element is unknownThe root cause was thrown at: MethodVerifier.kt:28
-File being compiled at position: (16,1) in /Users/steve/src/kotlin-compiler-crash/src/DefaultingMap.kt
+File being compiled at position: (8,1) in /Users/steve/src/kotlin-compiler-crash/src/DefaultingMap.kt
 The root cause was thrown at: TransformationMethodVisitor.java:88
 	at org.jetbrains.kotlin.codegen.FunctionCodegen.endVisit(FunctionCodegen.java:1008)
 	at org.jetbrains.kotlin.codegen.FunctionCodegen.generateMethodBody(FunctionCodegen.java:412)
@@ -276,15 +246,13 @@ The root cause was thrown at: TransformationMethodVisitor.java:88
 Caused by: org.jetbrains.kotlin.codegen.CompilationException: Back-end (JVM) Internal error: Couldn't transform method node:
 crash ()V:
    L0
-    LINENUMBER 17 L0
+    LINENUMBER 9 L0
     NEW DefaultingMap
     DUP
-    LCONST_0
-    INVOKESTATIC java/lang/Long.valueOf (J)Ljava/lang/Long;
-    INVOKESPECIAL DefaultingMap.<init> (Ljava/lang/Object;)V
+    INVOKESPECIAL DefaultingMap.<init> ()V
     ASTORE 0
    L1
-    LINENUMBER 18 L1
+    LINENUMBER 10 L1
     ALOAD 0
     ICONST_0
     INVOKESTATIC java/lang/Integer.valueOf (I)Ljava/lang/Integer;
@@ -294,15 +262,12 @@ crash ()V:
     ILOAD 1
     ALOAD 2
     ILOAD 1
-    INVOKEVIRTUAL DefaultingMap.get (Ljava/lang/Object;)Ljava/lang/Object;
-    CHECKCAST java/lang/Number
-    INVOKEVIRTUAL java/lang/Number.longValue ()J
+    INVOKEVIRTUAL DefaultingMap.get (Ljava/lang/Object;)J
     LDC 42
     LADD
-    INVOKESTATIC java/lang/Long.valueOf (J)Ljava/lang/Long;
-    INVOKEVIRTUAL DefaultingMap.set (Ljava/lang/Object;Ljava/lang/Object;)V
+    INVOKEVIRTUAL DefaultingMap.set (Ljava/lang/Object;J)V
    L2
-    LINENUMBER 19 L2
+    LINENUMBER 11 L2
     RETURN
    L3
     LOCALVARIABLE m LDefaultingMap; L1 L3 0
@@ -319,12 +284,12 @@ Caused by: java.lang.AssertionError: AFTER mandatory stack transformations: inco
 	at org.jetbrains.kotlin.codegen.optimization.OptimizationMethodVisitor.performTransformations(OptimizationMethodVisitor.kt:44)
 	at org.jetbrains.kotlin.codegen.TransformationMethodVisitor.visitEnd(TransformationMethodVisitor.java:65)
 	... 45 more
-Caused by: java.lang.RuntimeException: org.jetbrains.org.objectweb.asm.tree.analysis.AnalyzerException: Error at instruction 13: Expected I, but found R
+Caused by: java.lang.RuntimeException: org.jetbrains.org.objectweb.asm.tree.analysis.AnalyzerException: Error at instruction 11: Expected I, but found R
 	at org.jetbrains.kotlin.codegen.optimization.transformer.MethodTransformer.runAnalyzer(MethodTransformer.java:34)
 	at org.jetbrains.kotlin.codegen.optimization.transformer.MethodTransformer.analyze(MethodTransformer.java:44)
 	at org.jetbrains.kotlin.codegen.optimization.MethodVerifier.transform(MethodVerifier.kt:26)
 	... 48 more
-Caused by: org.jetbrains.org.objectweb.asm.tree.analysis.AnalyzerException: Error at instruction 13: Expected I, but found R
+Caused by: org.jetbrains.org.objectweb.asm.tree.analysis.AnalyzerException: Error at instruction 11: Expected I, but found R
 	at org.jetbrains.org.objectweb.asm.tree.analysis.Analyzer.analyze(Analyzer.java:295)
 	at org.jetbrains.kotlin.codegen.optimization.transformer.MethodTransformer.runAnalyzer(MethodTransformer.java:31)
 	... 50 more

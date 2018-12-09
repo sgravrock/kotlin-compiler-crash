@@ -1,19 +1,11 @@
-class DefaultingMap<K, V> {
-    private val storage = mutableMapOf<K, V>()
-    private val defaultValue: V
+class DefaultingMap<K> {
+    operator fun get(key: K) = 0L
 
-    constructor(defaultValue: V) {
-        this.defaultValue = defaultValue
-    }
-
-    operator fun get(key: K) = storage[key] ?: defaultValue
-
-    operator fun set(key: K, value: V) {
-        storage[key] = value
+    operator fun set(key: K, value: Long) {
     }
 }
 
 fun crash() {
-    val m = DefaultingMap<Int, Long>(0)
+    val m = DefaultingMap<Int>()
     m[0] += 42L
 }
