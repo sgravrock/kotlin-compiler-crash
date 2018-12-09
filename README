@@ -1,5 +1,7 @@
 This produces the following compiler error using IDEA 2018.2:
 
+Information:Kotlin: kotlinc-jvm 1.2.51 (JRE 1.8.0_131-b11)
+Information:12/9/18, 10:47 AM - Compilation completed with 1 error and 0 warnings in 1 s 849 ms
 Error:Kotlin: [Internal Error] java.lang.IllegalStateException: Backend Internal error: Exception during code generation
 Cause: Back-end (JVM) Internal error: wrong code generated
 org.jetbrains.kotlin.codegen.CompilationException Back-end (JVM) Internal error: Couldn't transform method node:

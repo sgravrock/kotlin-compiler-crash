@@ -16,16 +16,4 @@ class DefaultingMap<K, V> {
 
     val values: Collection<V>
         get() = storage.values
-
-
-//    fun values() = storage.values
-}
-
-fun foo() {
-    val m = DefaultingMap<Int, Int>(0)
-    var m2 = mapOf<Int, Int>()
-
-    for (k in m) {
-        println(k)
-    }
 }

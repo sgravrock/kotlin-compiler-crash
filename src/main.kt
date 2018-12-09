@@ -97,13 +97,3 @@ fun findHighScore(numPlayers: Int, highestMarble: Int, debug: Boolean = false): 
 
     return playerScores.values.max()!!
 }
-
-fun initScores(numPlayers: Int): MutableMap<Int, Long> {
-    val playerScores = mutableMapOf<Int, Long>()
-
-    for (player in 0 until numPlayers) {
-        playerScores[player] = 0
-    }
-
-    return playerScores
-}
